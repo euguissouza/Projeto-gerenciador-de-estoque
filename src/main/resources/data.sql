@@ -1,0 +1,7 @@
+
+CREATE TABLE modelos (
+    Marca VARCHAR(255) NOT NULL,
+    Modelo VARCHAR(255) NOT NULL,
+    Escala VARCHAR(255) NOT NULL,
+    Fabricante VARCHAR(255) NOT NULL
+);

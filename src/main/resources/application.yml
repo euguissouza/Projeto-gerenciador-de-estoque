@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: Estoque-minis-api
+  datasource:
+    url: jdbc:h2:mem:minis
+    username: root
+    password: root
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+  h2:
+    console:
+      enabled: true
+      path: /banco-mini
