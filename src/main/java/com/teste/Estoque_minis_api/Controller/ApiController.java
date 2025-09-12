@@ -43,9 +43,17 @@ public class ApiController {
         return modeloRepository.findById(Id).orElse(null);
     }
 
-        @DeleteMapping("/teste/{id}")
+    @DeleteMapping("/teste/{id}")
         public void deletaItem(@PathVariable("id") String Id){
             System.out.println("\uD83D\uDCE4 Item retirado do iventario");
             modeloRepository.deleteById(Id);
-        }
+    }
+
+    @PutMapping("/teste/{id}")
+    public void atualizar(@PathVariable("id") String Id, @RequestBody Modelos modelos){
+        modelos.setIdLong(Id);
+        modeloRepository.save(modelos);
+    }
+
+
 }

@@ -12,6 +12,7 @@ public class Modelos {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long Id;
+    private String idLong = "" + Id;
     private String token;
     private String Marca;
     private String Modelo;
@@ -22,6 +23,13 @@ public class Modelos {
 
     public Modelos(){}
 
+    public String getIdLong() {
+        return idLong;
+    }
+
+    public void setIdLong(String idLong) {
+        this.idLong = idLong;
+    }
 
     public String getToken() {
         return token;
