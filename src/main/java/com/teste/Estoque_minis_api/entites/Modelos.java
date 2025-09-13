@@ -1,5 +1,6 @@
 package com.teste.Estoque_minis_api.entites;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.teste.Estoque_minis_api.repositories.ModeloRepository;
 import jakarta.persistence.*;
@@ -12,18 +13,18 @@ public class Modelos {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long Id;
-    private String idLong = "" + Id;
     private String token;
     private String Marca;
     private String Modelo;
     private String Escala;
     private String Fabricante;
-
+    @JsonIgnore
+    private String idLong = "" + Id;
 
 
     public Modelos(){}
 
-    public String getIdLong() {
+   public String getIdLong() {
         return idLong;
     }
 

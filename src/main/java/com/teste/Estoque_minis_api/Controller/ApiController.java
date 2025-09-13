@@ -13,6 +13,7 @@ import java.util.UUID;
 @RequestMapping("/minis")
 public class ApiController {
 
+
     //injeção de dados
     private ModeloRepository modeloRepository;
     public ApiController(ModeloRepository modeloRepository) {
@@ -52,8 +53,8 @@ public class ApiController {
     @PutMapping("/teste/{id}")
     public void atualizar(@PathVariable("id") String Id, @RequestBody Modelos modelos){
         modelos.setIdLong(Id);
+        System.out.println("\uD83D\uDEE0\uFE0F Objeto atualizado!");
         modeloRepository.save(modelos);
     }
-
 
 }

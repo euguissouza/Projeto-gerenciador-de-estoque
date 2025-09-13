@@ -10,8 +10,4 @@ public class EstoqueMinisApiApplication {
 		SpringApplication.run(EstoqueMinisApiApplication.class, args);
         System.out.println("Hello World!");
 	}
-
-
-
-
 }
