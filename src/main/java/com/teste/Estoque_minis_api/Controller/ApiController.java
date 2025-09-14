@@ -44,6 +44,11 @@ public class ApiController {
         return modeloRepository.findById(Id).orElse(null);
     }
 
+    @GetMapping("/teste/marca")
+    public List<Modelos> buscaMarca(@RequestParam("marca") String Marca){
+        return modeloRepository.findByMarca(Marca);
+    }
+
     @DeleteMapping("/teste/{id}")
         public void deletaItem(@PathVariable("id") String Id){
             System.out.println("\uD83D\uDCE4 Item retirado do iventario");
@@ -56,5 +61,6 @@ public class ApiController {
         System.out.println("\uD83D\uDEE0\uFE0F Objeto atualizado!");
         modeloRepository.save(modelos);
     }
+
 
 }
